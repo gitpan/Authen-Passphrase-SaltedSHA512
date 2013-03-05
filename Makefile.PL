@@ -13,15 +13,16 @@ WriteMakefile(
     PL_FILES           => {},
     CONFIGURE_REQUIRES => { 'ExtUtils::MakeMaker' => '6.62', },
     BUILD_REQUIRES     => { 
-                            'Test::More' => '0.98', 
+                            'Test::More' => '0.98',
+                            'English'    => 0,
                           },
     PREREQ_PM          => {
         'Authen::Passphrase'    => 0,
-        'Bytes::Random::Secure' => 0,
+        'Bytes::Random::Secure' => '0.20',
     },
     META_MERGE => {
         provides  => 'Authen::Passphrase::SaltedSHA512.pm',
-        version   => '0.06',
+        version   => '0.07',
         resources => {
             repository => {
                 web =>
